@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walidacja Formularza</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+<style>
+    .container{
+        padding: 50px 0px !important
+    }
+    .form-label{
+        display: flex;
+    }
+    .form-label p{
+        margin: 0 5px !important;
+        
+    }
+    #input{
+        margin: 20px 0px;
+    }
+</style>
+<body>
+    <div class="container">
+        <form class="row">
+            <div class="col-md-12">
+                <label for="text" class="form-label">Imię *<p class="infotext"></p></label>
+                <input type="text" class="form-control" required>
+            </div>
+            <div class="col-md-12">
+                <label for="text" class="form-label">Naziwsko *<p class="infotext"></p></label>
+                <input type="text" class="form-control" required>
+            </div>
+            <div class="col-md-12">
+                <label for="inputEmail4" class="form-label">Email *<p class="info"></p></label>
+                <input type="email" class="form-control" id="inputEmail4">
+            </div>
+            <div class="col-md-12">
+                <label for="inputPassword4" class="form-label">Pesel *<p class="infotwo"></p></label>
+                <input type="password" class="form-control" id="inputPassword4">
+            </div>
+            <div class="col-md-6">
+                <label for="inputCity" class="form-label">Miasto * <p class="infothree"></p></label>
+                <input type="text" class="form-control" id="inputCity">
+            </div>
+
+            <input type="file" onchange="ValidateSize(this)" accept="application/pdf" name="Maskymalny rozmiar Cv to 2 MB" id="input" />
+        
+            <div class="col-12">
+                <button type="submit"  class="btn btn-primary">Wyślij formularz</button>
+            </div>
+        </form>
+    </div>
+    <script src="./main.js"></script>
+</body>
+
+</html>
